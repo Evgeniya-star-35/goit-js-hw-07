@@ -1,10 +1,14 @@
-'use strict';
-const navElem = document.querySelectorAll('.item');
-console.log(navElem);
-const totalItem = navElem.length;
+// Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'.
+const itemGallery = document.querySelectorAll('li.item');
 
-console.log(`В списке ${totalItem} категории.`);
+console.log(`В списке ${itemGallery.length} категории`);
 
-// const text = document.querySelector('.item');
+const navElem = document.querySelector('#categories');
 
-// console.log(text.textContent);
+const totalItem = navElem.children.length;
+
+const itemsEl = document.querySelectorAll('.item');
+for (const item of itemsEl) {
+  console.log(`Категория:`, item.firstElementChild.textContent);
+  console.log(`Количество элементов :`, item.lastElementChild.children.length);
+}
