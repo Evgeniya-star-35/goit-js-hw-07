@@ -10,9 +10,12 @@ const refs = {
 };
 refs.nameInput.addEventListener('input', onInputChange);
 function onInputChange(event) {
+  if (refs.nameInput.textContent === '') {
+    refs.nameInput.textContent = 'незнакомец';
+  }
   refs.nameOutput.textContent = event.currentTarget.value;
 }
-if (refs.nameInput.textContent === '') {
-  refs.nameInput.textContent = 'незнакомец';
-}
+// if (refs.nameInput.textContent === '') {
+//   refs.nameInput.textContent = 'незнакомец';
+// }
 // : refs.nameInput;
