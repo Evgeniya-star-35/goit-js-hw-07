@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const findTargetId = document.querySelector('#gallery');
+const galleryEl = document.querySelector('#gallery');
 
 const createGallery = ({ url, alt }) =>
   `<li class =  gallery-item><img class = img-gallery src="${url}" alt = "${alt}"></li>`;
@@ -23,7 +23,7 @@ const showGallery = images.reduce(
   '',
 );
 
-findTargetId.insertAdjacentHTML('beforeend', showGallery);
+galleryEl.insertAdjacentHTML('beforeend', showGallery);
 
 // ход мислей предпоследний
 
