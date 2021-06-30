@@ -13,17 +13,36 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('#gallery');
-const createGallery = images.forEach(img => {
-  const itemGallery = document.createElement('li');
-  const imgGallery = document.createElement('img');
-  imgGallery.alt = img.alt;
-  imgGallery.classList.add('gallery-img');
-  imgGallery.src = img.url;
-  imgGallery.width = 300;
+const findTargetId = document.querySelector('#gallery');
 
-  const fullTag = galleryEl.append(itemGallery, imgGallery);
-  console.log(galleryEl);
-  return fullTag;
-});
-galleryEl.append(...createGallery);
+const createGallery = ({ url, alt }) =>
+  `<li class =  gallery-item><img class = img-gallery src="${url}" alt = "${alt}"></li>`;
+
+const showGallery = images.reduce(
+  (acc, image) => acc + createGallery(image),
+  '',
+);
+
+findTargetId.insertAdjacentHTML('beforeend', showGallery);
+
+// ход мислей предпоследний
+
+// const makeGallery = images
+//   .map((image) => {
+//     const createTagLi = document.createElement("li");
+//     createTagLi.classList.add("li-item-gallery");
+//     const createTagImg = document.createElement("img");
+//     createTagImg.src = image.url;
+//     createTagImg.alt = image.alt;
+//     createTagImg.classList.add("galery-image");
+//     const fullTagLiAndImg = findTargetId.append(createTagLi, createTagImg);
+//     return fullTagLiAndImg;
+//   })
+//   .reduce(
+//     ({ url, alt }) =>
+//       <li class =  li-item-gallery><img class = galery-image src=${url} ${alt}></li>,
+//     ""
+//   );
+// document
+//   .querySelector("#gallery")
+//   .insertAdjacentHTML("beforeend", ...makeGallery);
