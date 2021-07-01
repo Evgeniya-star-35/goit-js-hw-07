@@ -5,8 +5,8 @@ const refs = {
 
 refs.nameInput.oninput = function (event) {
   if (refs.nameInput.value === '') {
-    refs.nameOutput.innerHTML = 'незнакомец';
+    refs.nameOutput.textContent = 'незнакомец';
   } else {
-    refs.nameOutput.innerHTML = refs.nameInput.value;
+    refs.nameOutput.textContent = event.currentTarget.value;
   }
 };

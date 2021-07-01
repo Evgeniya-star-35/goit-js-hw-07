@@ -1,7 +1,7 @@
 // Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item. Получится 'В списке 3 категории.'.
 const itemGallery = document.querySelectorAll('li.item');
 
-console.log(`В списке ${itemGallery.length} категории`);
+console.log(`В списке ${itemGallery.length} категории.`);
 
 const navElem = document.querySelector('#categories');
 

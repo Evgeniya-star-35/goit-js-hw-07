@@ -25,7 +25,7 @@ const showGallery = images.reduce(
 
 galleryEl.insertAdjacentHTML('beforeend', showGallery);
 
-// ход мислей предпоследний
+// ход мыслей
 
 // const makeGallery = images
 //   .map((image) => {

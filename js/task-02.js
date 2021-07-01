@@ -13,7 +13,7 @@ const ingredientsEl = ingredients.forEach(elem => {
   let itemElem = document.createElement('li');
 
   itemElem.append(elem);
-  console.log(itemElem);
+  // console.log(itemElem);
 
   const fullIngredient = listElem.appendChild(itemElem);
   console.log(fullIngredient);
