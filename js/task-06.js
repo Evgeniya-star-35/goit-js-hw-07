@@ -6,9 +6,6 @@ const inputEl = document.querySelector('#validation-input');
 // console.log(inputEl);
 inputEl.addEventListener('blur', onInputChange);
 
-let inputLength = inputEl.dataset.length;
-// console.log(inputLength);
-
 function onInputChange() {
   if (inputEl.value.length === 6) {
     inputEl.classList.add('valid');
