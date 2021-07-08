@@ -20,11 +20,7 @@ const ingredients = [
 //   return fullIngredient;
 // });
 const listElem = document.querySelector('#ingredients');
-const itemGallery = document.createElement('li');
-console.log(itemGallery);
 
-const showGallery = ingredients.forEach(el =>
-  createGallery.insertAdjacentHTML('afterbegin', el),
-);
+const showGallery = ingredients.reduce((acc, el) => acc + `<li>${el}</li>`, '');
 
 listElem.insertAdjacentHTML('beforeend', showGallery);
