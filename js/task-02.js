@@ -8,19 +8,20 @@ const ingredients = [
   'Приправы',
 ];
 
-// const ingredientsEl = ingredients.forEach(elem => {
-//   const listElem = document.querySelector('#ingredients');
-//   let itemElem = document.createElement('li');
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// const listElem = document.querySelector('#ingredients');
 
-//   itemElem.append(elem);
-//   // console.log(itemElem);
+// const showGallery = ingredients.reduce((acc, el) => acc + `<li>${el}</li>`, '');
 
-//   const fullIngredient = listElem.appendChild(itemElem);
-//   // console.log(fullIngredient);
-//   return fullIngredient;
-// });
-const listElem = document.querySelector('#ingredients');
+// listElem.insertAdjacentHTML('beforeend', showGallery);
 
-const showGallery = ingredients.reduce((acc, el) => acc + `<li>${el}</li>`, '');
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+const listEl = document.querySelector('#ingredients');
+const vegList = ingredients.map(el => {
+  const itemVegs = document.createElement('li');
+  itemVegs.append(el);
 
-listElem.insertAdjacentHTML('beforeend', showGallery);
+  return itemVegs;
+});
+
+listEl.append(...vegList);
