@@ -9,19 +9,19 @@ const ingredients = [
 ];
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-// const listElem = document.querySelector('#ingredients');
+const listElem = document.querySelector('#ingredients');
 
-// const showGallery = ingredients.reduce((acc, el) => acc + `<li>${el}</li>`, '');
+const showGallery = ingredients.reduce((acc, el) => acc + `<li>${el}</li>`, '');
 
-// listElem.insertAdjacentHTML('beforeend', showGallery);
+listElem.insertAdjacentHTML('beforeend', showGallery);
 
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-const listEl = document.querySelector('#ingredients');
-const vegList = ingredients.map(el => {
-  const itemVegs = document.createElement('li');
-  itemVegs.append(el);
+// const listEl = document.querySelector('#ingredients');
+// const vegList = ingredients.map(el => {
+//   const itemVegs = document.createElement('li');
+//   itemVegs.append(el);
 
-  return itemVegs;
-});
+//   return itemVegs;
+// });
 
-listEl.append(...vegList);
+// listEl.append(...vegList);
