@@ -25,3 +25,16 @@ listElem.insertAdjacentHTML('beforeend', showGallery);
 // });
 
 // listEl.append(...vegList);
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// const listEl = document.querySelector('#ingredients');
+// const makeIngredients = elements => {
+//   return elements.map(el => {
+//     const itemVegs = document.createElement('li');
+//     itemVegs.append(el);
+
+//     return itemVegs;
+//   });
+// };
+// const listIngredients = makeIngredients(ingredients);
+
+// listEl.append(...listIngredients);
