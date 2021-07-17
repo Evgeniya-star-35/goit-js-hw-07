@@ -7,11 +7,13 @@ const inputEl = document.querySelector('#validation-input');
 inputEl.addEventListener('blur', onInputChange);
 
 function onInputChange() {
-  if (inputEl.value.length === 6) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+  if (inputEl.value.length === +inputEl.dataset.length) {
+    classToggle('valid', 'invalid');
   } else {
-    inputEl.classList.remove('valid');
-    inputEl.classList.add('invalid');
+    classToggle('invalid', 'valid');
   }
+}
+function classToggle(add, remove) {
+  inputEl.classList.add(add);
+  inputEl.classList.remove(remove);
 }

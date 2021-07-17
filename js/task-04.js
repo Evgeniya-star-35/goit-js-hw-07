@@ -15,3 +15,14 @@ const decrement = () => {
 
 buttonDec.addEventListener('click', decrement);
 buttonInc.addEventListener('click', increment);
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// const [buttonDec, value, buttonInc] =
+//   document.querySelector('#counter').children;
+
+// const increment = () => (value.textContent = +value.textContent + 1);
+
+// const decriment = () => (value.textContent -= 1);
+
+// buttonInc.addEventListener('click', increment);
+// buttonDec.addEventListener('click', decriment);

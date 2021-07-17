@@ -38,3 +38,12 @@ listEl.append(...vegList);
 // const listIngredients = makeIngredients(ingredients);
 
 // listEl.append(...listIngredients);
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+//вариант
+
+// const ulList = document.querySelector('#ingredients');
+// const ingredientsEl = ingredients.map((el) => {
+//   const li = document.createElement('li');
+//   li.innerHTML = `<p> ${el} </p>`;
+//   return li;
